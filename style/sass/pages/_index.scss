@@ -1,0 +1,140 @@
+
+/*Localisation*/ 
+
+#localisation{
+    background-color: $bgcolor-secondary;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    .fa-location-dot{
+        padding-right: 15px;
+    }
+}
+
+/*Description Ohmyfood*/ 
+#description_ohmyfood{
+    background-color: $bgcolor-primary;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-bottom: 10%;
+    h2{
+        width: 70%;
+        margin-bottom: 0;
+    }
+    p{
+        width: 80%;
+        margin-top: 2%;
+    }
+}
+
+/*Fonctionnement Ohmyfood*/
+.fonctionnement{
+    padding-bottom: 10%;
+    h2{
+        margin-left: 5%;
+    }
+    &__container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__card{
+        display: flex;
+        background-color: $bgcolor-primary;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 20px;
+        height: 75px;
+        width: 87%;
+        margin-bottom: 4%;
+        box-shadow: $shadow;
+        p {
+            margin: -2%;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            padding: 3px;
+            text-align: center;
+            background-color: $color-primary;
+            color: white;
+            font-size: 14px;
+        }
+        .icon{
+            margin-left: 8%;
+        }
+        h3{
+            margin-left: 6%;
+        }
+    }
+}
+
+/*Restaurants*/ 
+
+.restaurants{
+    background-color: $bgcolor-primary;
+    padding-bottom: 10%;
+    h2{
+        margin: 0 0 5% 5%;
+        padding-top: 10%;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    &__card{
+        display: flex;
+        flex-flow: wrap;
+        border-radius: 25px;
+        width: 350px;
+        margin: auto;
+        margin-bottom: 5%;
+        background-color: white;
+        box-shadow: $shadow;
+        h3{
+            margin-bottom: 1%;
+            font-size: 18px;
+        }
+        p{
+            margin-top: 1%;
+            font-size: 17px;
+        }
+        img{
+            object-fit: cover;        
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            width: 350px;
+            height: 180px;
+            margin: auto;
+        }
+        .icon{
+            color: black; 
+            margin: auto;    
+            height: 25px;
+            width: 25px;
+            align-self: flex-end;
+            &--gradient{
+                display: none;
+            }     
+        }
+        &--txt{
+            flex-direction: column;
+            margin-left: 5%;
+            width: 75%;
+        }
+        &--new{
+            position: absolute;
+            background-color: $color-tertiary;
+            color: darken($color: $color-tertiary, $amount: 35);
+            padding: 7px 12px 7px 12px;
+            font-weight: bold;
+            margin: 50% 0 0 60%;
+            border-radius: 2px;
+            box-shadow: $shadow;
+        }
+    }
+}

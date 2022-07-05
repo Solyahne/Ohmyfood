@@ -1,0 +1,11 @@
+html{
+	/* Set border-box as the global default */
+	box-sizing: border-box;
+	font-family: Raleway-VariableFont_wght;
+}
+
+*, *:before, *:after{
+	/* Allow each element to override */
+	box-sizing: inherit;
+}
+
