@@ -25,7 +25,7 @@ h1 {
   font-family: Shrikhand;
 }
 
-p, button {
+p, button, ul {
   font-family: Roboto;
 }
 
@@ -84,11 +84,20 @@ footer {
 }
 footer .icon {
   color: white;
+  height: 15px;
+  width: 15px;
 }
 footer h1 {
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 200;
-  margin-left: 5%;
+  margin-left: 10%;
+}
+footer a {
+  color: white;
+}
+footer ul {
+  font-size: 17px;
+  font-weight: 500;
 }
 
 button {
