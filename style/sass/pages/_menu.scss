@@ -1,0 +1,78 @@
+.menu{
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
+    .repas{
+        background-color: $bgcolor-primary;
+        position: relative;
+        margin-top: -15%;
+        padding: 3% 0 10% 0;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        &__titre{
+            display: flex;
+            align-items: center;
+            margin-left: 5%;
+            h1{
+                width: 80%;
+                font-size: 27px;
+                font-weight: 500;
+            }
+            .icon{
+                height: 25px;
+                width: 25px;
+            }
+        }
+        &__categorie{
+            display: flex;
+            flex-direction: column;
+            font-weight: 100;
+            font-size: 18px;
+            margin-left: 5%;
+            &::after{
+                content: "";
+                border-bottom: solid $color-tertiary 3px;
+                width: 11%;
+                padding-top: 1%;
+            }
+        }
+        &__container{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        }
+        &__plat{
+            background-color: white;
+            border-radius: 20px;
+            margin-bottom: 3%;
+            width: 95%;
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: $shadow;
+            h2{
+                font-size: 19px;
+                width: 100%;
+                margin: 3% 0 0 4%;
+            }
+            p{
+                width: 80%;
+                margin: 1% 0 3% 4%;   
+                white-space: nowrap;      
+                text-overflow: ellipsis;  
+                overflow: hidden;
+                font-size: 18px;
+            }
+            &__prix{
+                width: 10% !important;
+                font-weight: bold;
+            }
+        }
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10% auto 10% auto;      
+        }
+    }
+}
