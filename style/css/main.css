@@ -25,7 +25,7 @@ h1 {
   font-family: Shrikhand;
 }
 
-p, button, ul {
+p, button, ul, h4 {
   font-family: Roboto;
 }
 
@@ -62,19 +62,26 @@ ul {
 
 header {
   display: flex;
-  flex-direction: column-reverse;
+  flex-wrap: wrap;
 }
 header .logo {
   width: 40%;
   margin: auto;
-  padding: 5% 0 2% 0;
+  padding: 5% 0 3% 0;
   justify-content: center;
 }
-header::before {
+header::after {
   content: "";
   height: 1px;
   width: 100%;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.39);
+}
+header .icon {
+  color: #353535;
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  margin: 22px 0 0 5%;
 }
 
 footer {
@@ -113,6 +120,7 @@ button {
   width: 250px;
   border: none;
   font-weight: 500;
+  box-shadow: 0px 10px 17px -5px #DDDDDD;
 }
 
 /*Localisation*/
@@ -167,7 +175,7 @@ button {
   height: 75px;
   width: 87%;
   margin-bottom: 4%;
-  box-shadow: 0px 5px 15px -4px #CECECE;
+  box-shadow: 0px 10px 17px -5px #DDDDDD;
 }
 .fonctionnement__card p {
   margin: -2%;
@@ -209,7 +217,7 @@ button {
   margin: auto;
   margin-bottom: 5%;
   background-color: white;
-  box-shadow: 0px 5px 15px -4px #CECECE;
+  box-shadow: 0px 10px 17px -5px #DDDDDD;
 }
 .restaurants__card h3 {
   margin-bottom: 1%;
@@ -251,5 +259,83 @@ button {
   font-weight: bold;
   margin: 50% 0 0 60%;
   border-radius: 2px;
-  box-shadow: 0px 5px 15px -4px #CECECE;
+  box-shadow: 0px 10px 17px -5px #DDDDDD;
+}
+
+.menu img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.menu .repas {
+  background-color: #F6F6F6;
+  position: relative;
+  margin-top: -15%;
+  padding: 3% 0 10% 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.menu .repas__titre {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
+.menu .repas__titre h1 {
+  width: 80%;
+  font-size: 27px;
+  font-weight: 500;
+}
+.menu .repas__titre .icon {
+  height: 25px;
+  width: 25px;
+}
+.menu .repas__categorie {
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+  font-size: 18px;
+  margin-left: 5%;
+}
+.menu .repas__categorie::after {
+  content: "";
+  border-bottom: solid #99E2D0 3px;
+  width: 11%;
+  padding-top: 1%;
+}
+.menu .repas__container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.menu .repas__plat {
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 3%;
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0px 10px 17px -5px #DDDDDD;
+}
+.menu .repas__plat h2 {
+  font-size: 19px;
+  width: 100%;
+  margin: 3% 0 0 4%;
+}
+.menu .repas__plat p {
+  width: 80%;
+  margin: 1% 0 3% 4%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 18px;
+}
+.menu .repas__plat__prix {
+  width: 10% !important;
+  font-weight: bold;
+}
+.menu .repas button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto 10% auto;
 }/*# sourceMappingURL=main.css.map */

@@ -1,153 +1,129 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/css/normalize.css">
-        <script src="https://kit.fontawesome.com/864947ab41.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
-        <link rel="stylesheet" href="style/css/main.css">
-        <title>Ohmyfood!</title>
-    </head>
-    <body>
-        <header class="header__menus">
-            <a href="index.html"><i class="icon fa-solid fa-arrow-left"></i></a>
-            <img src="images/logo/ohmyfood.png" alt="logo_ohmyfood">            
-        </header>
-        <main id="menus">
-            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="plat_a_la_francaise">
-            <h1>
-                À la française
-            </h1>
-            <i class="icon fa-solid fa-heart"></i>
-            <section class="repas">
-                <h3 class="repas__titre">
-                    ENTRÉES
-                </h3>
-                <article class="repas__plat">
-                    <h2>
-                        Tartare de poulpe acidulé
-                    </h2>
-                    <p>
-                        Aux zests d'orange
-                    </p>
-                    <p class="repas__plat__prix">
-                        25€
-                    </p>
-                </article>
-                <article class="repas__plat">
-                    <h2>
-                        Velouté de légumes d'antan
-                    </h2>
-                    <p>
-                        Carotte, panais, topinambour
-                    </p>
-                    <p class="repas_plat__prix">
-                        35€
-                    </p>
-                </article>
-                <article class="repas__plat">
-                    <h2>
-                        Soupe à l'oignon                        
-                    </h2>
-                    <p>
-                        Revisitée
-                    </p>
-                    <p class="repas__plat__prix">
-                        20€
-                    </p>
-                </article>                
-            </section>
-            <section class="repas">
-                <h3 class="repas__titre">
-                    PLATS
-                </h3>
-                <article class="repas__plat">
-                    <h2>
-                        Coquilles Saint-Jacques
-                    </h2>
-                    <p>
-                        Accompagnées d'une purée de panais
-                    </p>
-                    <p class="repas__plat__prix">
-                        40€
-                    </p>
-                </article>
-                <article class="repas__plat">
-                    <h2>
-                        Magret de canard
-                    </h2>
-                    <p>
-                        Et parmentier de pommes de terre
-                    </p>
-                    <p class="repas_plat__prix">
-                        35€
-                    </p>
-                </article>
-                <article class="repas__plat">
-                    <h2>
-                        Pigeonneau d’Ille-et-Vilaine
-                    </h2>
-                    <p>
-                        Sur son lit de gnocchis aux légumes
-                    </p>
-                    <p class="repas__plat__prix">
-                        44€
-                    </p>
-                </article>                
-            </section>
-            <section class="repas">
-                <h3 class="repas__titre">
-                    DESSERTS
-                </h3>
-                <article class="repas__plat">
-                    <h2>
-                        Pétales de violettes glacés
-                    </h2>
-                    <p>
-                        Et purée de noisettes
-                    </p>
-                    <p class="repas__plat__prix">
-                        18€
-                    </p>
-                </article>
-                <article class="repas__plat">
-                    <h2>
-                        Fondant au chocolat
-                    </h2>
-                    <p>
-                        Revisité
-                    </p>
-                    <p class="repas_plat__prix">
-                        22€
-                    </p>
-                </article>
-                <article class="repas__plat">
-                    <h2>
-                        Millefeuille croustillant
-                    </h2>
-                    <p>
-                        Myrtilles et pâte d’amande
-                    </p>
-                    <p class="repas__plat__prix">
-                        23€
-                    </p>
-                </article>                
-            </section>
-            <button type="button">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style/css/normalize.css">
+		<script src="https://kit.fontawesome.com/864947ab41.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+		<link rel="stylesheet" href="style/css/main.css">
+		<title>Ohmyfood!</title>
+	</head>
+	<body>
+		<header class="header__menus">
+			<a href="index.html"><i class="icon fa-solid fa-arrow-left"></i></a>
+			<img src="images/logo/ohmyfood.png" alt="logo_ohmyfood" class="logo">
+		</header>
+		<main class="menu">
+			<img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="plat_a_la_francaise">
+			<section class="repas">
+                <div class="repas__titre">
+            <h1>À la française</h1>
+			<i class="icon fa-regular fa-heart"></i>
+                </div>
+			<h4 class="repas__categorie">ENTRÉES</h4>
+			<div class="repas__container">
+				<article class="repas__plat">
+					<h2>Tartare de poulpe acidulé</h2>
+					<p>
+						Aux zests d'orange
+					</p>
+					<p class="repas__plat__prix">
+						25€
+					</p>
+				</article>
+				<article class="repas__plat">
+					<h2>Velouté de légumes d'antan</h2>
+					<p>
+						Carotte, panais, topinambour
+					</p>
+					<p class="repas__plat__prix">
+						35€
+					</p>
+				</article>
+				<article class="repas__plat">
+					<h2>Soupe à l'oignon</h2>
+					<p>
+						Revisitée
+					</p>
+					<p class="repas__plat__prix">
+						20€
+					</p>
+				</article>
+			</div>
+			<h4 class="repas__categorie">PLATS</h4>
+			<div class="repas__container">
+				<article class="repas__plat">
+					<h2>Coquilles Saint-Jacques</h2>
+					<p>
+						Accompagnées d'une purée de panais
+					</p>
+					<p class="repas__plat__prix">
+						40€
+					</p>
+				</article>
+				<article class="repas__plat">
+					<h2>Magret de canard</h2>
+					<p>
+						Et parmentier de pommes de terre
+					</p>
+					<p class="repas__plat__prix">
+						35€
+					</p>
+				</article>
+				<article class="repas__plat">
+					<h2>Pigeonneau d’Ille-et-Vilaine</h2>
+					<p>
+						Sur son lit de gnocchis aux légumes
+					</p>
+					<p class="repas__plat__prix">
+						44€
+					</p>
+				</article>
+			</div>
+			<h4 class="repas__categorie">DESSERTS</h4>
+			<div class="repas__container">
+				<article class="repas__plat">
+					<h2>Pétales de violettes glacés</h2>
+					<p>
+						Et purée de noisettes
+					</p>
+					<p class="repas__plat__prix">
+						18€
+					</p>
+				</article>
+				<article class="repas__plat">
+					<h2>Fondant au chocolat</h2>
+					<p>
+						Revisité
+					</p>
+					<p class="repas__plat__prix">
+						22€
+					</p>
+				</article>
+				<article class="repas__plat">
+					<h2>Millefeuille croustillant</h2>
+					<p>
+						Myrtilles et pâte d’amande
+					</p>
+					<p class="repas__plat__prix">
+						23€
+					</p>
+				</article>
+			</div>
+			<button type="button">
                 Commander
-            </button>            
-        </main>
-        <footer>
-            <h1>
-                ohmyfood
-            </h1>
-            <ul>
-                <li><i class="icon fa-solid fa-utensils"></i>Proposer un restaurant</li>
-                <li><i class="icon fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li><a href="mailto:">Contact</a></li>
-            </ul>            
-        </footer>
-    </body>
+            </button>
+        </section>
+		</main>
+		<footer>
+			<h1>ohmyfood</h1>
+			<ul>
+				<li><i class="icon fa-solid fa-utensils"></i>Proposer un restaurant</li>
+				<li><i class="icon fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
+				<li>Mentions légales</li>
+				<li><a href="mailto:">Contact</a></li>
+			</ul>
+		</footer>
+	</body>
 </html>
