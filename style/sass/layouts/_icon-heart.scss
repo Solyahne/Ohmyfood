@@ -1,0 +1,25 @@
+.icon-heart{
+    color: black; 
+    margin: auto;    
+    font-size: 25px;
+    align-self: flex-end;
+    z-index: 1;
+    &:hover{
+        + .icon-heart--gradient{
+            opacity: 1;
+            transform: scaleX(1);
+            transition: transform 500ms ease-out;
+        }
+    }
+    &--gradient{
+        transform: scaleX(0);
+        opacity: 0;
+        z-index: 0;
+        margin: 206.5px auto 20px 302.5px;
+        position: absolute;
+        font-size: 25px;
+        background-image: $color-gradient;
+        color: transparent;
+        background-clip: text;
+    }
+}    
