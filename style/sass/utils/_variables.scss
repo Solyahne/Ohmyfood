@@ -2,17 +2,19 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA; 
 $color-tertiary: #99E2D0;
 
+//Couleurs des dégradés des boutons et coeurs
 $color-gradient: linear-gradient($color-secondary, $color-primary);
+$color-gradient-light: linear-gradient(lighten($color-secondary, 5), lighten($color-primary, 5));
 
 $bgcolor-primary: #F6F6F6;
 $bgcolor-secondary: #EAEAEA;
 $bgcolor-footer: #353535;
 
+//Couleur de la majorité des icones
 $iconcolor-primary: #7E7E7E;
 
-//$shadow: 0px 5px 15px -4px #CECECE;
-$shadow: 0px 10px 17px -5px #DDDDDD;
-
+$shadow: 0px 10px 17px -5px #d4d4d4;
+$shadow-dark: 0px 10px 17px -5px #8f8f8f;
 
 $police-title: Shrikhand; 
 $police-txt: Roboto;

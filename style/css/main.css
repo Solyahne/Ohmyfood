@@ -25,7 +25,7 @@ h1 {
   font-family: Shrikhand;
 }
 
-p, button, ul, h4 {
+p, button, ul, h4, div {
   font-family: Roboto;
 }
 
@@ -56,8 +56,7 @@ ul {
 
 .icon {
   color: #7E7E7E;
-  height: 20px;
-  width: 20px;
+  font-size: 20px;
 }
 
 header {
@@ -120,7 +119,37 @@ button {
   width: 250px;
   border: none;
   font-weight: 500;
-  box-shadow: 0px 10px 17px -5px #DDDDDD;
+  box-shadow: 0px 10px 17px -5px #d4d4d4;
+}
+button:hover {
+  box-shadow: 0px 10px 17px -5px #8f8f8f;
+  background: linear-gradient(#ff93e1, #a16be0);
+  transition: all ease-in 0.3s;
+}
+
+.icon-heart {
+  color: black;
+  margin: auto;
+  font-size: 25px;
+  align-self: flex-end;
+  z-index: 1;
+}
+.icon-heart:hover + .icon-heart--gradient {
+  opacity: 1;
+  transform: scaleX(1);
+  transition: transform 500ms ease-out;
+}
+.icon-heart--gradient {
+  transform: scaleX(0);
+  opacity: 0;
+  z-index: 0;
+  margin: 206.5px auto 20px 302.5px;
+  position: absolute;
+  font-size: 25px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 /*Localisation*/
@@ -175,7 +204,7 @@ button {
   height: 75px;
   width: 87%;
   margin-bottom: 4%;
-  box-shadow: 0px 10px 17px -5px #DDDDDD;
+  box-shadow: 0px 10px 17px -5px #d4d4d4;
 }
 .fonctionnement__card p {
   margin: -2%;
@@ -217,7 +246,7 @@ button {
   margin: auto;
   margin-bottom: 5%;
   background-color: white;
-  box-shadow: 0px 10px 17px -5px #DDDDDD;
+  box-shadow: 0px 10px 17px -5px #d4d4d4;
 }
 .restaurants__card h3 {
   margin-bottom: 1%;
@@ -230,21 +259,15 @@ button {
 .restaurants__card img {
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   width: 350px;
   height: 180px;
   margin: auto;
 }
-.restaurants__card .icon {
-  color: black;
+.restaurants__card .icon-heart {
   margin: auto;
-  height: 25px;
-  width: 25px;
   align-self: flex-end;
-}
-.restaurants__card .icon--gradient {
-  display: none;
 }
 .restaurants__card--txt {
   flex-direction: column;
@@ -257,9 +280,10 @@ button {
   color: #2c9c81;
   padding: 7px 12px 7px 12px;
   font-weight: bold;
-  margin: 50% 0 0 60%;
+  font-size: 15px;
+  margin: 13px 0 0 253px;
   border-radius: 2px;
-  box-shadow: 0px 10px 17px -5px #DDDDDD;
+  box-shadow: 0px 10px 17px -5px #d4d4d4;
 }
 
 .menu img {
@@ -285,9 +309,10 @@ button {
   font-size: 27px;
   font-weight: 500;
 }
-.menu .repas__titre .icon {
-  height: 25px;
-  width: 25px;
+.menu .repas__titre .icon-heart--gradient {
+  position: absolute;
+  font-size: 23px;
+  margin: 0 0 2px 82.5%;
 }
 .menu .repas__categorie {
   display: flex;
@@ -314,7 +339,7 @@ button {
   width: 95%;
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 0px 10px 17px -5px #DDDDDD;
+  box-shadow: 0px 10px 17px -5px #d4d4d4;
 }
 .menu .repas__plat h2 {
   font-size: 19px;

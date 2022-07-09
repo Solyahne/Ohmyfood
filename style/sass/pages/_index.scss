@@ -105,22 +105,16 @@
         }
         img{
             object-fit: cover;        
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
             width: 350px;
             height: 180px;
             margin: auto;
         }
-        .icon{
-            color: black; 
+        .icon-heart{
             margin: auto;    
-            height: 25px;
-            width: 25px;
             align-self: flex-end;
-            &--gradient{
-                display: none;
-            }     
-        }
+        }       
         &--txt{
             flex-direction: column;
             margin-left: 5%;
@@ -132,7 +126,8 @@
             color: darken($color: $color-tertiary, $amount: 35);
             padding: 7px 12px 7px 12px;
             font-weight: bold;
-            margin: 50% 0 0 60%;
+            font-size: 15px;
+            margin: 13px 0 0 253px;
             border-radius: 2px;
             box-shadow: $shadow;
         }

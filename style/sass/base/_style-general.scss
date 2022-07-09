@@ -1,7 +1,7 @@
 h1{
     font-family: $police-title;
 }
-p, button, ul, h4{
+p, button, ul, h4, div{
     font-family: $police-txt;
 }
 h2, h3{
@@ -25,6 +25,5 @@ list-style-type: none;
 }
 .icon{
     color: $iconcolor-primary;
-    height: 20px;
-    width: 20px;
+    font-size: 20px;
 }

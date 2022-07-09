@@ -8,4 +8,9 @@ button{
     border: none;
     font-weight: 500;
     box-shadow: $shadow;
+    &:hover{
+        box-shadow: $shadow-dark;
+        background: $color-gradient-light;
+        transition: all ease-in 0.3s;
+    }
 }
