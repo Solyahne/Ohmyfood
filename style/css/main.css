@@ -202,13 +202,16 @@ button:hover {
   align-items: center;
   border-radius: 20px;
   height: 75px;
-  width: 87%;
+  width: 350px;
   margin-bottom: 4%;
   box-shadow: 0px 10px 17px -5px #d4d4d4;
 }
 .fonctionnement__card:hover {
   background-color: #f2eafb;
   transition: all 0.5s ease-in-out;
+}
+.fonctionnement__card:hover > .icon {
+  color: #9356DC;
 }
 .fonctionnement__card p {
   margin: -2%;
