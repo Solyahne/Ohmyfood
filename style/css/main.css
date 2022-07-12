@@ -62,6 +62,7 @@ ul {
 header {
   display: flex;
   flex-wrap: wrap;
+  background-color: white;
 }
 header .logo {
   width: 40%;
@@ -110,6 +111,72 @@ footer li {
   margin-bottom: 1%;
 }
 
+.loader::before {
+  content: "";
+  background: linear-gradient(#FF79DA, #9356DC);
+  opacity: 0.8;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  -webkit-animation: fadeout 3s forwards;
+          animation: fadeout 3s forwards;
+}
+.loader::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  margin: -40px 0 0 -40px;
+  top: 50%;
+  left: 50%;
+  border: solid white 8px;
+  border-bottom: solid transparent 8px;
+  border-radius: 50%;
+  z-index: 11;
+  -webkit-animation: spin 3s linear forwards;
+          animation: spin 3s linear forwards;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    z-index: 10;
+  }
+  to {
+    z-index: -10;
+  }
+}
+@keyframes fadeout {
+  from {
+    z-index: 10;
+  }
+  to {
+    z-index: -10;
+  }
+}
 button {
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
@@ -134,7 +201,11 @@ button:hover {
   align-self: flex-end;
   z-index: 1;
 }
-.icon-heart:hover + .icon-heart--gradient {
+.icon-heart:active {
+  opacity: 0;
+  transition: all 400ms ease-out;
+}
+.icon-heart:active + .icon-heart--gradient {
   opacity: 1;
   transform: scaleX(1);
   transition: transform 500ms ease-out;
@@ -186,6 +257,7 @@ button:hover {
 /*Fonctionnement Ohmyfood*/
 .fonctionnement {
   padding: 5% 0 15% 0;
+  background-color: white;
 }
 .fonctionnement h2 {
   margin-left: 5%;
@@ -417,21 +489,21 @@ button:hover {
 @-webkit-keyframes plat-appear {
   0% {
     opacity: 0;
-    margin-top: 30px;
+    transform: translateY(99%);
   }
   100% {
     opacity: 1;
-    margin-top: 0px;
+    transform: translateY(0);
   }
 }
 
 @keyframes plat-appear {
   0% {
     opacity: 0;
-    margin-top: 30px;
+    transform: translateY(99%);
   }
   100% {
     opacity: 1;
-    margin-top: 0px;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=main.css.map */
