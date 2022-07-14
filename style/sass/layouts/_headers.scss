@@ -23,3 +23,26 @@ header{
         margin: 22px 0 0 5%;
     }
 }
+
+//Version tablette
+
+@include tablet{
+    header{
+        .logo{
+            width: 250px;
+            height: auto;
+        }
+    }
+}
+
+//Version desktop
+
+@include desktop{
+    header{
+        .logo{
+            width: 240px;
+            height: auto;
+            padding: 2% 0 2% 0;
+        }
+    }
+}

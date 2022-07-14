@@ -76,14 +76,12 @@
             }
         }
         button{
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin: 10% auto 10% auto;      
         }
     }
 }
 
+//Animation d'apparition des plats
 @keyframes plat-appear {
     0% {
         opacity: 0;
@@ -95,3 +93,4 @@
     }
 }    
 
+//Version tablette 

@@ -84,6 +84,19 @@ header .icon {
   margin: 22px 0 0 5%;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  header .logo {
+    width: 250px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .logo {
+    width: 240px;
+    height: auto;
+    padding: 2% 0 2% 0;
+  }
+}
 footer {
   background-color: #353535;
   color: white;
@@ -111,6 +124,38 @@ footer li {
   margin-bottom: 1%;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+  }
+  footer li {
+    white-space: nowrap;
+  }
+  footer .icon {
+    margin-right: 10%;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer {
+    padding: 2% 0 1% 0;
+  }
+  footer h1 {
+    margin: 0 0 2% 3%;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+  }
+  footer li {
+    white-space: nowrap;
+  }
+  footer .icon {
+    margin-right: 10%;
+  }
+}
 .loader::before {
   content: "";
   background: linear-gradient(#FF79DA, #9356DC);
@@ -119,8 +164,8 @@ footer li {
   width: 100%;
   height: 100%;
   z-index: 10;
-  -webkit-animation: fadeout 3s forwards;
-          animation: fadeout 3s forwards;
+  -webkit-animation: fadeout 4s forwards;
+          animation: fadeout 4s forwards;
 }
 .loader::after {
   content: "";
@@ -139,7 +184,7 @@ footer li {
 }
 
 @-webkit-keyframes spin {
-  0% {
+  from {
     transform: rotate(0deg);
     opacity: 1;
   }
@@ -151,7 +196,7 @@ footer li {
 }
 
 @keyframes spin {
-  0% {
+  from {
     transform: rotate(0deg);
     opacity: 1;
   }
@@ -180,6 +225,9 @@ footer li {
 button {
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 16px;
   border-radius: 30px;
   height: 50px;
@@ -280,7 +328,7 @@ button:hover {
 }
 .fonctionnement__card:hover {
   background-color: #f2eafb;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .fonctionnement__card:hover > .icon {
   color: #9356DC;
@@ -365,6 +413,131 @@ button:hover {
   box-shadow: 0px 10px 17px -5px #d4d4d4;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container_description_fonctionnement {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 5%;
+  }
+  #description_ohmyfood {
+    width: 50%;
+    background-color: white;
+    padding-bottom: 0;
+  }
+  #description_ohmyfood h2 {
+    margin-bottom: 3%;
+    width: 85%;
+  }
+  #description_ohmyfood p {
+    font-size: 20px;
+    width: 85%;
+  }
+  #description_ohmyfood button {
+    width: 250px;
+    height: 55px;
+    font-size: 19px;
+  }
+  .fonctionnement {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .fonctionnement h2 {
+    margin: 0 0 5% 0;
+  }
+  .restaurants {
+    padding-bottom: 5%;
+  }
+  .restaurants h2 {
+    padding-top: 5%;
+  }
+  .restaurants__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurants__card {
+    margin-bottom: 8%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container_description_fonctionnement {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 3%;
+  }
+  #description_ohmyfood {
+    width: 50%;
+    background-color: white;
+    padding-bottom: 0;
+  }
+  #description_ohmyfood h2 {
+    margin-bottom: 1%;
+    width: 85%;
+    font-size: 23px;
+  }
+  #description_ohmyfood p {
+    font-size: 19px;
+    width: 85%;
+    margin: 3% 0 5% 0;
+  }
+  #description_ohmyfood button {
+    width: 240px;
+    height: 50px;
+    font-size: 17px;
+  }
+  .fonctionnement {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3% 0 0 0;
+  }
+  .fonctionnement__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .fonctionnement__card {
+    width: 500px;
+    height: 55px;
+  }
+  .fonctionnement__card p {
+    margin-right: 5%;
+  }
+  .fonctionnement__card .icon {
+    font-size: 17px;
+    margin-right: 10%;
+  }
+  .fonctionnement__card h3 {
+    font-size: 16px;
+  }
+  .fonctionnement h2 {
+    margin: 0 0 5% 17%;
+    font-size: 20px;
+  }
+  .restaurants h2 {
+    padding: 3% 0 0 0;
+    font-size: 23px;
+    margin: 0 0 3% 5%;
+  }
+  .restaurants__container {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .restaurants__card {
+    width: 550px;
+  }
+  .restaurants__card img {
+    width: 550px;
+    height: 150px;
+  }
+}
 .menu img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -480,9 +653,6 @@ button:hover {
   font-weight: bold;
 }
 .menu .repas button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 10% auto 10% auto;
 }
 
