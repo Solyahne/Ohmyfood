@@ -84,7 +84,7 @@ header .icon {
   margin: 22px 0 0 5%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 672px) and (max-width: 990px) {
   header .logo {
     width: 250px;
     height: auto;
@@ -94,7 +94,7 @@ header .icon {
     margin: 50px 0 0 10%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 990px) {
   header .logo {
     width: 240px;
     height: auto;
@@ -132,7 +132,7 @@ footer li {
   margin-bottom: 1%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 672px) and (max-width: 990px) {
   footer ul {
     display: flex;
     justify-content: space-between;
@@ -145,7 +145,7 @@ footer li {
     margin-right: 10%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 990px) {
   footer {
     display: flex;
     align-items: center;
@@ -221,17 +221,21 @@ footer li {
 @-webkit-keyframes fadeout {
   from {
     z-index: 10;
+    opacity: 0.8;
   }
   to {
     z-index: -10;
+    opacity: 0;
   }
 }
 @keyframes fadeout {
   from {
     z-index: 10;
+    opacity: 0.8;
   }
   to {
     z-index: -10;
+    opacity: 0;
   }
 }
 button {
@@ -283,7 +287,7 @@ button:hover {
           background-clip: text;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 990px) {
   .icon-heart--gradient {
     margin: 177px auto 20px 483px;
   }
@@ -464,7 +468,7 @@ button:hover {
   transition: all 0.4s ease-in-out;
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 672px) and (max-width: 990px) {
   .localisation .fa-location-dot {
     margin-left: 10%;
   }
@@ -518,7 +522,7 @@ button:hover {
     margin-bottom: 8%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 990px) {
   .localisation .fa-location-dot {
     margin-left: 5%;
   }
@@ -742,9 +746,11 @@ button:hover {
     transform: translateY(0);
   }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 672px) and (max-width: 990px) {
   .menu img {
     height: 350px;
+    -o-object-position: 75% 75%;
+       object-position: 75% 75%;
   }
   .menu .repas {
     padding-bottom: 3%;
@@ -769,7 +775,7 @@ button:hover {
     margin: 5% auto 5% auto;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 990px) {
   .menu img {
     -o-object-position: 75% 75%;
        object-position: 75% 75%;
