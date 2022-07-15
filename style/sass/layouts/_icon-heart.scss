@@ -4,7 +4,7 @@
     font-size: 25px;
     align-self: flex-end;
     z-index: 1;
-    &:active{
+    &:hover{
         + .icon-heart--gradient{
             opacity: 1;
             transform: scaleX(1);
@@ -25,3 +25,13 @@
         background-clip: text;
     }
 }    
+
+//Version desktop 
+
+@include desktop{
+    .icon-heart{
+        &--gradient{
+            margin: 177px auto 20px 483px;
+        }
+    }
+}

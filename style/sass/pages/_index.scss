@@ -1,15 +1,31 @@
 
 /*Localisation*/ 
 
-#localisation{
+.localisation{
     background-color: $bgcolor-secondary;
     display: flex;
     width: 100%;
+    height: 55px;
     justify-content: center;
     align-items: center;
-    font-weight: 500;
+    &__form{
+        background-color: $bgcolor-secondary;
+        font-size: 19px;
+        border: none;
+        &::placeholder{
+            color: black;
+            font-weight: 500;
+        }
+        &:focus{
+            outline: none;
+            &::placeholder{
+                color: transparent;
+            }
+        }
+    }
     .fa-location-dot{
         padding-right: 15px;
+        margin-left: 20%;
     }
 }
 
@@ -139,12 +155,21 @@
             border-radius: 2px;
             box-shadow: $shadow;
         }
+        &:hover{
+            box-shadow: $shadow-dark;
+            transition: all 0.4s ease-in-out;
+        }
     }
 }
 
 //Version tablette 
 
 @include tablet{
+    .localisation{
+        .fa-location-dot{
+            margin-left: 10%;
+        }
+    }
     .container_description_fonctionnement{
         display: flex;
         flex-wrap: nowrap;
@@ -199,6 +224,11 @@
 //Version Dekstop
 
 @include desktop{
+    .localisation{
+        .fa-location-dot{
+            margin-left: 5%;
+        }
+    }
     .container_description_fonctionnement{
         display: flex;
         flex-wrap: nowrap;
@@ -255,21 +285,26 @@
         }
     }
     .restaurants{
+        padding-bottom: 3%;
         h2{
             padding: 3% 0 0 0;
             font-size: 23px;
-            margin: 0 0 3% 5%;
+            margin: 0 0 3% 12%;
         }
         &__container{
             flex-direction: row;
             justify-content: space-around;
             flex-wrap: wrap;
+            margin: 0 7% 0 7%;
         }
         &__card{
             width: 550px;
             img{
                 width: 550px;
                 height: 150px;
+            }
+            &--new{
+                margin: 13px 0 0 450px;
             }
         }
     }
