@@ -51,7 +51,8 @@
             margin-bottom: 3%;
             width: 95%;
             display: flex;
-            flex-wrap: wrap;
+            overflow: hidden;
+            position: relative;
             box-shadow: $shadow;
             animation: plat-appear 2000ms backwards; 
             @for $i from 1 through 10{
@@ -59,13 +60,21 @@
                     animation-delay: 200ms * $i;
                 }
             }
+            &__text{
+                flex-flow: column;
+                width: 88%;
+                white-space: nowrap;      
+                text-overflow: ellipsis;  
+                overflow: hidden;
+            }
             h2{
                 font-size: 19px;
-                width: 100%;
                 margin: 3% 0 0 4%;
+                white-space: nowrap;      
+                text-overflow: ellipsis;  
+                overflow: hidden;
             }
             p{
-                width: 82%;
                 margin: 1% 3% 3% 4%;   
                 white-space: nowrap;      
                 text-overflow: ellipsis;  
@@ -73,28 +82,47 @@
                 font-size: 18px;
             }
             &__prix{
-                width: 5%;
+                width: 10%;
                 font-weight: bold;
-                margin-top: 1.5%;
+                font-size: 17px;
+                align-self: flex-end;
+                margin: 0 2% 2.5% 0;
             }
-        }
+            .fa-check{
+                color: $color-tertiary;
+                font-size: 18px;
+                padding: 5px;
+                border-radius: 50%;
+                font-weight: bolder;
+                background-color: white;
+                position: absolute;
+                margin: 18px 0 0 88%;
+                z-index: 1;
+                transform: translateX(99px) rotate(0);
+            }
+            &:hover{
+                > .fa-check{                    
+                    animation: check 1s both;
+                }
+            }
+            &::after{
+                content: "";
+                background-color: $color-tertiary;
+                width: 2%;
+                opacity: 0;
+                height: 65px;
+                transform-origin: right;
+            }
+            &:hover::after{
+                width: 20%;
+                animation: coche_verte 1s both;
+                }
+            }
         button{
             margin: 10% auto 10% auto;      
         }
     }
 }
-
-//Animation d'apparition des plats
-@keyframes plat-appear {
-    0% {
-        opacity: 0;
-        transform: translateY(99%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}    
 
 //Version tablette 
 
@@ -115,6 +143,15 @@
             }
             &__card{
                 width: 85%;
+                height: 85px;
+                .fa-check{
+                    margin: 25px 0 0 89%;
+                    font-size: 22px;
+                }
+                &::after{
+                    content: "";
+                    height: 85px;
+                }
             }
             &__categorie_plat{
                 margin-left: 10%;

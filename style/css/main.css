@@ -1,3 +1,63 @@
+@-webkit-keyframes plat-appear {
+  from {
+    opacity: 0;
+    transform: translateY(99%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes plat-appear {
+  from {
+    opacity: 0;
+    transform: translateY(99%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes coche_verte {
+  from {
+    width: 2%;
+    opacity: 1;
+    transform: scaleX(0);
+  }
+  to {
+    width: 20%;
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+@keyframes coche_verte {
+  from {
+    width: 2%;
+    opacity: 1;
+    transform: scaleX(0);
+  }
+  to {
+    width: 20%;
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes check {
+  from {
+    transform: translateX(99px) rotate(-2turn);
+  }
+  to {
+    transform: translateX(0) rotate(0);
+  }
+}
+@keyframes check {
+  from {
+    transform: translateX(99px) rotate(-2turn);
+  }
+  to {
+    transform: translateX(0) rotate(0);
+  }
+}
 html {
   /* Set border-box as the global default */
   box-sizing: border-box;
@@ -658,7 +718,8 @@ button:hover {
   margin-bottom: 3%;
   width: 95%;
   display: flex;
-  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
   box-shadow: 0px 10px 17px -5px #d4d4d4;
   -webkit-animation: plat-appear 2000ms backwards;
           animation: plat-appear 2000ms backwards;
@@ -703,13 +764,21 @@ button:hover {
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms;
 }
+.menu .repas__card__text {
+  flex-flow: column;
+  width: 88%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .menu .repas__card h2 {
   font-size: 19px;
-  width: 100%;
   margin: 3% 0 0 4%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .repas__card p {
-  width: 82%;
   margin: 1% 3% 3% 4%;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -717,35 +786,45 @@ button:hover {
   font-size: 18px;
 }
 .menu .repas__card__prix {
-  width: 5%;
+  width: 10%;
   font-weight: bold;
-  margin-top: 1.5%;
+  font-size: 17px;
+  align-self: flex-end;
+  margin: 0 2% 2.5% 0;
+}
+.menu .repas__card .fa-check {
+  color: #99E2D0;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 50%;
+  font-weight: bolder;
+  background-color: white;
+  position: absolute;
+  margin: 18px 0 0 88%;
+  z-index: 1;
+  transform: translateX(99px) rotate(0);
+}
+.menu .repas__card:hover > .fa-check {
+  -webkit-animation: check 1s both;
+          animation: check 1s both;
+}
+.menu .repas__card::after {
+  content: "";
+  background-color: #99E2D0;
+  width: 2%;
+  opacity: 0;
+  height: 65px;
+  transform-origin: right;
+}
+.menu .repas__card:hover::after {
+  width: 20%;
+  -webkit-animation: coche_verte 1s both;
+          animation: coche_verte 1s both;
 }
 .menu .repas button {
   margin: 10% auto 10% auto;
 }
 
-@-webkit-keyframes plat-appear {
-  0% {
-    opacity: 0;
-    transform: translateY(99%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes plat-appear {
-  0% {
-    opacity: 0;
-    transform: translateY(99%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @media screen and (min-width: 672px) and (max-width: 990px) {
   .menu img {
     height: 350px;
@@ -764,6 +843,15 @@ button:hover {
   }
   .menu .repas__card {
     width: 85%;
+    height: 85px;
+  }
+  .menu .repas__card .fa-check {
+    margin: 25px 0 0 89%;
+    font-size: 22px;
+  }
+  .menu .repas__card::after {
+    content: "";
+    height: 85px;
   }
   .menu .repas__categorie_plat {
     margin-left: 10%;
