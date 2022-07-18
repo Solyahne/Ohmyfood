@@ -20,21 +20,41 @@
 }
 @-webkit-keyframes coche_verte {
   from {
-    width: 2%;
+    width: 0%;
     opacity: 1;
   }
   to {
-    width: 20%;
+    width: 25%;
     opacity: 1;
   }
 }
 @keyframes coche_verte {
   from {
-    width: 2%;
+    width: 0%;
     opacity: 1;
   }
   to {
-    width: 20%;
+    width: 25%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes coche_verte-reverse {
+  from {
+    width: 25%;
+    opacity: 1;
+  }
+  to {
+    width: 0%;
+    opacity: 1;
+  }
+}
+@keyframes coche_verte-reverse {
+  from {
+    width: 25%;
+    opacity: 1;
+  }
+  to {
+    width: 0%;
     opacity: 1;
   }
 }
@@ -52,6 +72,22 @@
   }
   to {
     transform: translateX(0) rotate(0);
+  }
+}
+@-webkit-keyframes check-reverse {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(99px);
+  }
+}
+@keyframes check-reverse {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(99px);
   }
 }
 html {
@@ -322,6 +358,7 @@ button:hover {
   z-index: 1;
 }
 .icon-heart:hover {
+  cursor: pointer;
   opacity: 0;
   transition: all 400ms ease-out;
 }
@@ -797,9 +834,14 @@ button:hover {
   font-weight: bolder;
   background-color: white;
   position: absolute;
-  margin: 21px 0 0 88%;
+  margin: 21px 0 0 87.5%;
   z-index: 1;
   transform: translateX(99px) rotate(0);
+  -webkit-animation: check-reverse 1s both;
+          animation: check-reverse 1s both;
+}
+.menu .repas__card:hover {
+  cursor: pointer;
 }
 .menu .repas__card:hover > .fa-check {
   -webkit-animation: check 1s both;
@@ -808,13 +850,16 @@ button:hover {
 .menu .repas__card::after {
   content: "";
   background-color: #99E2D0;
-  width: 2%;
+  width: 0%;
   opacity: 0;
   height: 70px;
+  margin-right: -15px;
   transform-origin: right;
+  -webkit-animation: coche_verte-reverse 1s backwards;
+          animation: coche_verte-reverse 1s backwards;
 }
 .menu .repas__card:hover::after {
-  width: 20%;
+  width: 25%;
   -webkit-animation: coche_verte 1s both;
           animation: coche_verte 1s both;
 }
@@ -843,7 +888,7 @@ button:hover {
     height: 80px;
   }
   .menu .repas__card .fa-check {
-    margin: 25px 0 0 89%;
+    margin: 25px 0 0 88.5%;
     font-size: 22px;
   }
   .menu .repas__card::after {

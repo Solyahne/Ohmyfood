@@ -5,6 +5,7 @@
     align-self: flex-end;
     z-index: 1;
     &:hover{
+        cursor: pointer;
         + .icon-heart--gradient{
             opacity: 1;
             transform: scaleX(1);
