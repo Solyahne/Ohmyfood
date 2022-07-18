@@ -103,7 +103,6 @@
                 animation: check-reverse 1s both;
             }
             &:hover{
-                cursor: pointer;
                 > .fa-check{                    
                     animation: check 1s both;
                 }
@@ -112,7 +111,6 @@
                 content: "";
                 background-color: $color-tertiary;
                 width: 0%;
-                opacity: 0;
                 height: 70px;
                 margin-right: -15px;
                 transform-origin: right;
@@ -150,7 +148,7 @@
                 width: 85%;
                 height: 80px;
                 .fa-check{
-                    margin: 25px 0 0 88.5%;
+                    margin: 25px 0 0 88%;
                     font-size: 22px;
                 }
                 &::after{
