@@ -85,7 +85,6 @@
 html {
   /* Set border-box as the global default */
   box-sizing: border-box;
-  font-family: Raleway-VariableFont_wght;
 }
 
 *, *:before, *:after {
@@ -200,10 +199,11 @@ footer .icon {
   width: 15px;
   margin-right: 4%;
 }
-footer h1 {
+footer h4 {
   font-size: 19px;
   font-weight: 200;
   margin-left: 10%;
+  font-family: Shrikhand;
 }
 footer a {
   color: white;
@@ -430,9 +430,11 @@ button:hover {
   text-align: center;
   padding-bottom: 15%;
 }
-#description_ohmyfood h2 {
+#description_ohmyfood__titre {
   width: 70%;
   margin: 10% 0 0 0;
+  font-family: Roboto-bold;
+  font-size: 25px;
 }
 #description_ohmyfood p {
   width: 80%;
@@ -570,7 +572,7 @@ button:hover {
     background-color: white;
     padding-bottom: 0;
   }
-  #description_ohmyfood h2 {
+  #description_ohmyfood__titre {
     margin-bottom: 3%;
     width: 85%;
   }
@@ -624,7 +626,7 @@ button:hover {
     background-color: white;
     padding-bottom: 0;
   }
-  #description_ohmyfood h2 {
+  #description_ohmyfood__titre {
     margin-bottom: 1%;
     width: 85%;
     font-size: 23px;

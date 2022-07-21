@@ -37,9 +37,11 @@
     flex-wrap: wrap;
     text-align: center;
     padding-bottom: 15%;
-    h2{
+    &__titre{
         width: 70%;
         margin: 10% 0 0 0;
+        font-family: $police-txt-bold;
+        font-size: 25px;
     }
     p{
         width: 80%;
@@ -181,7 +183,7 @@
         width: 50%;
         background-color: white;
         padding-bottom: 0;
-        h2{
+        &__titre{
             margin-bottom: 3%;
             width: 85%;
         }
@@ -240,7 +242,7 @@
         width: 50%;
         background-color: white;
         padding-bottom: 0;
-        h2{
+        &__titre{
             margin-bottom: 1%;
             width: 85%;
             font-size: 23px;
